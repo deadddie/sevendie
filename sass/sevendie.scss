@@ -21,6 +21,10 @@ $odd: #eee;
 
 $systemFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
+$br: 8px;
+$br-small: 5px;
+$br-large: 20px;
+
 $ext: png; //svg
 
 
@@ -191,7 +195,7 @@ pre {
   font-size: 0.94em;
   padding: 1px 10px 2px 10px;
   text-decoration: none;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 $br $br;
 }
 #skip-link a:hover,
 #skip-link a:focus,
@@ -306,7 +310,7 @@ ul.primary li.active a {
   color: $grey;
   font-weight: bold;
   font-family: $systemFont;
-  border-radius: 8px 8px 0 0;
+  border-radius: $br $br 0 0;
 }
 ul.primary li.active a,
 ul.primary li.active a.active,
@@ -347,7 +351,7 @@ ul.secondary li a:hover,
 ul.secondary li.active a,
 ul.secondary li.active a.active {
   padding: 2px 10px;
-  border-radius: 8px;
+  border-radius: $br;
 }
 ul.secondary li a:hover,
 ul.secondary li.active a,
@@ -382,7 +386,7 @@ ul.secondary li.active a.active {
   height: 55px;
   width: 80px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: $br-small;
 }
 #secondary-links ul.links li a:hover {
   background: $greyDark;
@@ -545,31 +549,27 @@ tr td:last-child {
   border-right: 1px solid $greyLight;
 }
 
+td.status-icon {
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 16px 16px;
+}
+
+tr.info td.status-icon {
+  background-image: url('/misc/message-16-info.png');
+}
+
+
 
 /**
  * Fieldsets.
- *
- * Fieldset legends are displayed like containers in Seven. However, several
- * browsers do not support styling of LEGEND elements. To achieve the desired
- * styling:
- * - All fieldsets use 'position: relative'.
- * - All legend labels are wrapped in a single span.fieldset-legend that uses
- *   'position: absolute', which means that the LEGEND element itself is not
- *   rendered by browsers.
- * - Due to using 'position: absolute', collapsed fieldsets do not have a
- *   height; the fieldset requires a 'padding-top' to make the absolute
- *   positioned .fieldset-legend appear as though it would have a height.
- * - Various browsers are positioning the legend differently if there is a
- *   'padding-left'/'padding-right' applied on a fieldset and inherit the
- *   positioning even to absolute positioned elements within; we therefore have
- *   to apply all padding to the inner .fieldset-wrapper instead.
  */
 fieldset {
   border: 1px solid $odd;
   padding: 2em 0 0 0;
   position: relative;
   margin: 1em 0;
-  border-radius: 8px;
+  border-radius: $br;
 }
 fieldset .fieldset-legend {
   color: $grey;
@@ -633,7 +633,7 @@ div.teaser-checkbox .form-item,
 .form-disabled select.form-select {
   background-color: $odd;
   color: $grey;
-  border-radius: 20px;
+  border-radius: $br-large;
 }
 
 /* Filter */
@@ -658,6 +658,7 @@ div.description,
   font-size: 0.9em;
   color: $grey;
   font-style: italic;
+  opacity: 0.75;
 }
 ul.tips li {
   margin: 0.25em 0 0.25em 1.5em;
@@ -683,7 +684,7 @@ a.button {
   font-family: $systemFont;
   border: none;
   background-color: $primary;
-  border-radius: 20px;
+  border-radius: $br-large;
 }
 input.form-submit:hover {
   background-color: $primaryDark;
@@ -703,7 +704,6 @@ a.button:hover,
 a.button:active {
   text-decoration: none;
   background-color: $primaryDark;
-  /*color: #5a5a5a;*/
 }
 input.form-submit:active {
   background: $grey;
@@ -726,17 +726,17 @@ select.form-select {
   border: 1px solid $greyLight;
   background: $white;
   color: $greyDark;
-  border-radius: 20px;
+  border-radius: $br-large;
 }
 textarea.form-textarea {
-  border-radius: 8px;
+  border-radius: $br;
 }
 input.form-text:focus,
 input.form-file:focus,
 textarea.form-textarea:focus,
 select.form-select:focus {
   color: $black;
-  border-color: #ace;
+  border-color: $primary; // #ace;
 }
 
 ul.action-links {
@@ -779,7 +779,7 @@ div.admin-panel {
   padding: 9px 9px 0;
   background: $odd;
   border: 1px solid $greyLight;
-  border-radius: 8px;
+  border-radius: $br;
 }
 div.admin-panel h3 {
   font-size: 0.923em;
@@ -788,7 +788,9 @@ div.admin-panel h3 {
   padding-bottom: 9px;
 }
 
-/* admin/appearance */
+/*
+ * Admin/Appearance
+ */
 #system-themes-page h2 {
   font-weight: normal;
   text-transform: uppercase;
@@ -803,7 +805,9 @@ div.admin-panel h3 {
   margin-top: 0;
 }
 
-/* Update options. */
+/*
+ * Update options.
+ */
 div.admin-options {
   background: $odd;
   line-height: 30px;
@@ -1014,7 +1018,7 @@ div.add-or-remove-shortcuts {
 .overlay-disable-message-focused #overlay-dismiss-message {
   background-color: #59a0d8;
   color: $white;
-  border-radius: 8px;
+  border-radius: $br;
 }
 
 #edit-status .filters .form-item {
@@ -1027,4 +1031,11 @@ input:disabled,
 textarea:disabled,
 select:disabled {
   cursor: not-allowed;
+}
+
+/*
+ * Messages.
+ */
+div.messages {
+  border-radius: $br-small;
 }
