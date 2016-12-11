@@ -1,2 +1,2 @@
-.sass-cache/
-*.css.map
+/.gulp-scss-cache/
+/node_modules/

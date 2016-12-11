@@ -1,0 +1,21 @@
+{
+  "name": "sevendie",
+  "version": "0.1.0",
+  "description": "Improved Seven theme for Drupal 7",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "deadie (https://github.com/deadddie)",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-scss": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-watch": "latest",
+    "gulp-plumber": "latest"
+  }
+}
