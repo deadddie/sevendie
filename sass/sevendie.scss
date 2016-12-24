@@ -15,18 +15,20 @@ $trippleDark: #edcc49;
 
 $grey: #888;
 $greyLight: #ccc;
+$greyLighter: #ddd;
 $greyDark: #333;
 
+$tableTrHover: #ddd;
 $odd: #eee;
 
-$systemFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$systemFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$small: 0.923em;
 
-$br: 8px;
-$br-small: 5px;
-$br-large: 20px;
+$br: 6px;
+$br-small: 2px;
+$br-large: 6px;
 
 $ext: png; //svg
-
 
 /**
  * Generic elements.
@@ -36,6 +38,7 @@ body {
   background: $white;
   font: normal 85%/1.2em $systemFont;
 }
+
 a {
   color: $primary;
   text-decoration: none;
@@ -44,6 +47,7 @@ a {
     color: $primaryDark;
   }
 }
+
 hr {
   margin: 0;
   padding: 0;
@@ -51,9 +55,11 @@ hr {
   height: 1px;
   background: $greyLight;
 }
+
 legend {
   font-weight: bold;
 }
+
 h1,
 h2,
 h3,
@@ -63,113 +69,137 @@ h6 {
   font-weight: bold;
   margin: 10px 0;
 }
+
 h1 {
   font-size: 1.538em;
 }
+
 h2 {
   font-size: 1.385em;
 }
+
 h3 {
   font-size: 1.231em;
 }
+
 h4 {
   font-size: 1.154em;
 }
+
 h5,
 h6 {
   font-size: 1.077em;
 }
+
 p {
   margin: 1em 0;
 }
+
 dl {
   margin: 0 0 20px;
 }
+
 dl dd,
 dl dl {
   margin-left: 20px;
   margin-bottom: 10px;
 }
+
 blockquote {
   margin: 1em 40px;
 }
+
 address {
   font-style: italic;
 }
+
 u,
 ins {
   text-decoration: underline;
 }
+
 s,
 strike,
 del {
   text-decoration: line-through;
 }
+
 big {
   font-size: larger;
 }
+
 small {
   font-size: smaller;
 }
+
 sub {
   vertical-align: sub;
   font-size: smaller;
   line-height: normal;
 }
+
 sup {
   vertical-align: super;
   font-size: smaller;
   line-height: normal;
 }
+
 nobr {
   white-space: nowrap;
 }
+
 abbr,
 acronym {
   border-bottom: dotted 1px;
 }
+
 ul,
 .block ul,
 .item-list ul {
-  list-style-type: disc;
-  list-style-image: none;
+  list-style: disc none;
   margin: 0.25em 0 0.25em 1.5em;
 }
+
 .item-list .pager li {
   padding: 0.5em;
 }
+
 .item-list ul li,
 li.leaf,
 ul.menu li {
-  list-style-type: disc;
-  list-style-image: none;
+  list-style: disc none;
 }
+
 ul.menu li {
   margin: 0;
 }
+
 ol {
   list-style-type: decimal;
   margin: 0.25em 0 0.25em 2em;
 }
+
 .item-list ul li.collapsed,
 ul.menu li.collapsed {
-  list-style-image: url(../images/menu-collapsed.png);
-  list-style-type: disc;
+  list-style: disc url(../images/menu-collapsed.png);
 }
+
 .item-list ul li.expanded,
 ul.menu li.expanded {
-  list-style-image: url(../images/menu-expanded.png);
-  list-style-type: circle;
+  list-style: circle url(../images/menu-expanded.png);
 }
+
 quote,
 code {
   margin: .5em 0;
 }
+
 code,
 pre,
 kbd {
   font-size: 1.231em;
 }
+
 pre {
   margin: 0.5em 0;
   white-space: pre-wrap;
@@ -186,6 +216,7 @@ pre {
   width: auto;
   z-index: 50;
 }
+
 #skip-link a,
 #skip-link a:link,
 #skip-link a:visited {
@@ -197,6 +228,7 @@ pre {
   text-decoration: none;
   border-radius: 0 0 $br $br;
 }
+
 #skip-link a:hover,
 #skip-link a:focus,
 #skip-link a:active {
@@ -212,10 +244,12 @@ pre {
   position: relative;
   background-color: $greyLight;
 }
+
 #branding div.breadcrumb {
   font-size: 0.846em;
   padding-bottom: 5px;
 }
+
 #branding div.block {
   position: relative;
   float: right;
@@ -223,19 +257,23 @@ pre {
   padding-left: 10px;
   background: $greyDark;
 }
+
 #branding div.block form label {
   display: none;
 }
+
 #branding div.block form div.form-item {
   float: left;
   border: 0;
   margin: 0;
   padding: 0;
 }
+
 #branding div.block form input.form-text {
   width: 140px;
   margin-right: 10px;
 }
+
 #branding div.block form input.form-submit {
   text-align: center;
   width: 80px;
@@ -245,12 +283,14 @@ pre {
  * Help.
  */
 #help {
-  font-size: 0.923em;
+  font-size: $small;
   margin-top: 1em;
 }
+
 #help p {
   margin: 0 0 10px;
 }
+
 #help div.more-help-link {
   text-align: right;
 }
@@ -262,6 +302,7 @@ pre {
   background: $greyDark;
   padding-top: 20px;
 }
+
 #branding h1.page-title {
   color: $black;
   margin: 0;
@@ -290,11 +331,13 @@ ul.primary {
   margin: 0;
   padding-top: 0;
 }
+
 ul.primary li {
   float: left;
   list-style: none;
   margin: 0 2px;
 }
+
 ul.primary li a:link,
 ul.primary li a.active,
 ul.primary li a:active,
@@ -312,6 +355,7 @@ ul.primary li.active a {
   font-family: $systemFont;
   border-radius: $br $br 0 0;
 }
+
 ul.primary li.active a,
 ul.primary li.active a.active,
 ul.primary li.active a:active,
@@ -319,33 +363,40 @@ ul.primary li.active a:visited {
   background-color: $white;
   border-color: $greyLight;
 }
+
 ul.primary li a:hover {
   color: $white;
   border-color: $white;
 }
+
 ul.primary li.active a:hover {
   color: $black;
 }
+
 .tabs-secondary {
   clear: both;
 }
+
 ul.secondary {
   float: right;
-  font-size: 0.923em;
+  font-size: $small;
   padding: 0 3px 5px;
   line-height: 1.385em;
   overflow: hidden;
   background-color: $white;
 }
+
 ul.secondary li {
   margin: 0 5px;
   float: none;
 }
+
 ul.secondary li a {
   background-color: $greyLight;
   color: $black;
   display: inline-block;
 }
+
 ul.secondary li a,
 ul.secondary li a:hover,
 ul.secondary li.active a,
@@ -353,12 +404,14 @@ ul.secondary li.active a.active {
   padding: 2px 10px;
   border-radius: $br;
 }
+
 ul.secondary li a:hover,
 ul.secondary li.active a,
 ul.secondary li.active a.active {
   color: $white;
   background: $grey;
 }
+
 #content {
   clear: left;
 }
@@ -374,11 +427,13 @@ ul.secondary li.active a.active {
   position: relative;
   color: $greyDark;
 }
+
 #secondary-links ul.links li {
   padding: 0 10px 10px 0;
 }
+
 #secondary-links ul.links li a {
-  font-size: 0.923em;
+  font-size: $small;
   background: $grey;
   color: $white;
   text-align: center;
@@ -388,20 +443,25 @@ ul.secondary li.active a.active {
   overflow: hidden;
   border-radius: $br-small;
 }
+
 #secondary-links ul.links li a:hover {
   background: $greyDark;
 }
+
 ul.links li,
 ul.inline li {
   padding-right: 1em;
 }
+
 ul.inline li {
   display: inline;
 }
+
 #secondary-links ul.links li.active-trail a,
 #secondary-links ul.links li a.active {
   background: $greyDark;
 }
+
 ul.admin-list li {
   position: relative;
   padding-left: 28px;
@@ -410,18 +470,20 @@ ul.admin-list li {
   margin-left: 0;
   margin-bottom: 10px;
   background: url(../images/list-item.png) no-repeat 0 6px;
-  list-style-type: none;
-  list-style-image: none;
+  list-style: none none;
 }
+
 .admin-panel .item-list ul,
 ul.admin-list {
   margin: 0;
   padding: 0;
 }
+
 .admin-panel .item-list ul,
 ul.admin-list.compact {
   margin: 8px 0;
 }
+
 .admin-panel .item-list li,
 ul.admin-list.compact li {
   border: none;
@@ -430,23 +492,28 @@ ul.admin-list.compact li {
   line-height: 1;
   padding: 0;
 }
+
 ul.admin-list li:last-child {
   border-bottom: none;
 }
+
 ul.admin-list li a {
   margin-left: -30px;
   padding: 0 0 4px 30px;
   min-height: 0;
 }
+
 ul.admin-list.compact li a {
   margin-left: 0;
   padding: 0;
 }
+
 ul.admin-list li div.description a {
   margin-left: 0;
   padding: 0;
   min-height: inherit;
 }
+
 div.submitted {
   color: $grey;
 }
@@ -456,10 +523,11 @@ div.submitted {
  */
 table {
   width: 100%;
-  font-size: 0.923em;
+  font-size: $small;
   margin: 0 0 10px;
   border: 1px solid $greyLight;
 }
+
 table td,
 table th {
   vertical-align: middle;
@@ -467,6 +535,7 @@ table th {
   border: 0;
   color: $black;
 }
+
 tr.even,
 tr.odd {
   border-width: 0 1px 0 1px;
@@ -474,73 +543,91 @@ tr.odd {
   border-color: $greyLight;
   background: $odd;
 }
+
 tr.odd {
   background: $white;
 }
+
 tr.drag {
   background: $trippleDark;
 }
+
 tr.drag-previous {
   background: $tripple;
 }
+
 table th {
   text-transform: uppercase;
   background: $greyLight;
   font-weight: normal;
   padding: 4px 10px;
-  color: $grey;
+  color: $white;
 }
+
 /**
  * Force browsers to calculate the width of a 'select all' TH element.
  */
 table th.select-all {
   width: 1px;
 }
+
 table th.active {
   background: #bdbeb9;
 }
+
 table th a {
   display: block;
   position: relative;
 }
+
 table th.active a {
   padding: 0 25px 0 0;
 }
+
 table th.active img {
   position: absolute;
   top: 3px;
   right: 3px;
 }
+
 table td.active {
   background: #e9e9dd;
 }
+
 table tr.odd td.active {
   background: #f3f4ee;
 }
+
 table tr.selected td.active,
 table tr.selected td {
   background: #ffc;
   border-color: #eeb;
 }
+
 table.system-status-report tr {
   border-bottom: 1px solid $greyLight;
 }
+
 table.system-status-report tr.ok {
   color: #255b1e;
   background-color: #e5ffe2;
 }
+
 table.system-status-report tr.info {
   color: #040f37;
   background-color: #bdf;
 }
+
 table.system-status-report tr.warning {
   color: #840;
   background-color: #fffce5;
 }
+
 table.system-status-report tr.error {
   color: #8c2e0b;
   background-color: #fef5f1;
 }
+
 /**
  * Exception for webkit bug with the right border of the last cell
  * in some tables, since it's webkit only, we can use :last-child
@@ -550,27 +637,29 @@ tr td:last-child {
 }
 
 td.status-icon {
-  background-repeat: no-repeat;
-  background-position: right center;
+  background: no-repeat right center;
   background-size: 16px 16px;
 }
 
 tr.info td.status-icon {
-  background-image: url('/misc/message-16-info.png');
+  background-image: url(../images/message-16-info.png);
 }
 
-
+tbody tr:hover {
+  background-color: $tableTrHover;
+}
 
 /**
  * Fieldsets.
  */
 fieldset {
-  border: 1px solid $odd;
+  border: 1px solid $greyLighter;
   padding: 2em 0 0 0;
   position: relative;
   margin: 1em 0;
   border-radius: $br;
 }
+
 fieldset .fieldset-legend {
   color: $grey;
   margin-top: 0.5em;
@@ -578,19 +667,24 @@ fieldset .fieldset-legend {
   position: absolute;
   text-transform: uppercase;
 }
+
 fieldset .fieldset-wrapper {
   padding: 0 15px 5px 15px;
 }
+
 fieldset.collapsed {
   background-color: transparent;
 }
+
 html.js fieldset.collapsed {
   border-width: 1px;
   height: auto;
 }
+
 fieldset fieldset {
   background-color: $white;
 }
+
 fieldset fieldset fieldset {
   background-color: $odd;
 }
@@ -602,6 +696,7 @@ fieldset fieldset fieldset {
   padding: 6px 0;
   margin: 0 0 10px;
 }
+
 .filter-wrapper .form-item,
 div.teaser-checkbox .form-item,
 .form-item .form-item {
@@ -609,23 +704,29 @@ div.teaser-checkbox .form-item,
   margin: 0;
   border: 0;
 }
+
 .form-type-checkbox {
   padding: 0;
 }
+
 .text-format-wrapper .form-item {
   padding-bottom: 0;
 }
+
 .form-item label {
   margin: 0;
   padding: 0;
 }
+
 .form-item label.option {
-  font-size: 0.923em;
+  font-size: $small;
   text-transform: none;
 }
+
 .form-item label.option input {
   vertical-align: middle;
 }
+
 .form-disabled input.form-autocomplete,
 .form-disabled input.form-text,
 .form-disabled input.form-file,
@@ -641,15 +742,18 @@ div.teaser-checkbox .form-item,
   border-top: 0;
   padding: 10px 2px;
 }
+
 .filter-wrapper .fieldset-wrapper {
   padding: 0 6px;
 }
+
 .filter-wrapper .form-item,
 .filter-wrapper .filter-guidelines,
 .filter-wrapper .filter-help {
-  font-size: 0.923em;
+  font-size: $small;
   padding: 2px 0 0 0;
 }
+
 ul.tips,
 div.description,
 .form-item div.description {
@@ -658,15 +762,18 @@ div.description,
   font-size: 0.9em;
   color: $grey;
   font-style: italic;
-  opacity: 0.75;
+  opacity: 1;
 }
+
 ul.tips li {
   margin: 0.25em 0 0.25em 1.5em;
 }
+
 body div.form-type-radio div.description,
 body div.form-type-checkbox div.description {
   margin-left: 1.5em;
 }
+
 input, textarea, select {
   outline: none;
 }
@@ -683,9 +790,10 @@ a.button {
   font-size: 1em;
   font-family: $systemFont;
   border: none;
-  background-color: $primary;
   border-radius: $br-large;
+  background: $primary none;
 }
+
 input.form-submit:hover {
   background-color: $primaryDark;
 }
@@ -694,10 +802,12 @@ input#edit-submit,
 input#edit-actions-save {
   background-color: $secondary;
 }
+
 input#edit-submit:hover,
 input#edit-actions-save:hover {
   background-color: $secondaryDark;
 }
+
 a.button:link,
 a.button:visited,
 a.button:hover,
@@ -705,11 +815,13 @@ a.button:active {
   text-decoration: none;
   background-color: $primaryDark;
 }
+
 input.form-submit:active {
   background: $grey;
   color: $white;
   text-shadow: $greyDark 0 -1px 0;
 }
+
 input.form-button-disabled,
 input.form-button-disabled:active {
   background: $odd none;
@@ -717,6 +829,7 @@ input.form-button-disabled:active {
   text-shadow: none;
   color: $greyLight;
 }
+
 input.form-autocomplete,
 input.form-text,
 input.form-file,
@@ -728,9 +841,11 @@ select.form-select {
   color: $greyDark;
   border-radius: $br-large;
 }
+
 textarea.form-textarea {
   border-radius: $br;
 }
+
 input.form-text:focus,
 input.form-file:focus,
 textarea.form-textarea:focus,
@@ -745,10 +860,12 @@ ul.action-links {
   list-style-type: none;
   overflow: hidden;
 }
+
 ul.action-links li {
   float: left;
   margin: 0 1em 0 0;
 }
+
 ul.action-links a {
   padding-left: 15px;
   background: transparent url(../images/add.png) no-repeat 0 center;
@@ -769,11 +886,13 @@ div.admin .left {
   width: 49%;
   margin: 0;
 }
+
 div.admin-panel,
 div.admin-panel .body {
   padding: 0;
   clear: left;
 }
+
 div.admin-panel {
   margin: 0 0 20px;
   padding: 9px 9px 0;
@@ -781,8 +900,9 @@ div.admin-panel {
   border: 1px solid $greyLight;
   border-radius: $br;
 }
+
 div.admin-panel h3 {
-  font-size: 0.923em;
+  font-size: $small;
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 9px;
@@ -795,12 +915,15 @@ div.admin-panel h3 {
   font-weight: normal;
   text-transform: uppercase;
 }
+
 .theme-selector h3 {
   font-weight: normal;
 }
+
 .theme-default h3 {
   font-weight: bold;
 }
+
 .system-themes-list-enabled .theme-selector h3 {
   margin-top: 0;
 }
@@ -816,15 +939,18 @@ div.admin-options {
   border: 1px solid $greyLight;
   margin: 0 0 10px;
 }
+
 div.admin-options label {
   text-transform: uppercase;
   font: 0.846em/1.575em $systemFont;
 }
+
 div.admin-options label,
 div.admin-options div.form-item {
   margin-right: 10px;
   float: left;
 }
+
 div.admin-options div.form-item {
   padding: 0;
   border: 0;
@@ -840,52 +966,62 @@ body.in-maintenance #sidebar-first {
   float: left;
   width: 200px;
 }
+
 body.in-maintenance #content {
   float: right;
   width: 550px;
   padding-right: 20px;
   clear: none;
 }
+
 body.in-maintenance #page {
   overflow: auto;
   width: 770px;
   margin: 0 auto;
   padding-top: 2em;
 }
+
 body.in-maintenance #branding h1 {
   width: 770px;
   margin: 0 auto;
   float: none;
 }
+
 body.in-maintenance .form-radios .form-type-radio {
   padding: 2px 0;
 }
+
 body.in-maintenance div.form-item:after {
   content: "";
   display: none;
   clear: none;
 }
+
 body.in-maintenance .form-submit {
   display: block;
 }
+
 body.in-maintenance #logo {
   margin-bottom: 1.5em;
   max-width: 180px;
 }
+
 ol.task-list {
   margin-left: 0;
-  list-style-type: none;
-  list-style-image: none;
+  list-style: none none;
 }
+
 ol.task-list li {
   padding: 0.5em 1em 0.5em 20px;
   color: $greyLight;
 }
+
 ol.task-list li.active {
   background: transparent url(../images/task-item.png) no-repeat 3px 50%;
   padding: 0.5em 1em 0.5em 20px;
   color: $black;
 }
+
 ol.task-list li.done {
   background: transparent url(../images/task-check.png) no-repeat 0 50%;
   color: $secondaryDark;
@@ -896,37 +1032,45 @@ ol.task-list li.done {
   background-color: $white;
   padding-top: 15px;
 }
+
 .overlay #branding h1.page-title,
 .overlay #left,
 .overlay #footer {
   display: none;
 }
+
 .overlay #page {
   margin: 0;
   padding: 0 20px;
 }
+
 .overlay #branding div.breadcrumb {
   float: left;
   position: relative;
   z-index: 10;
 }
+
 #overlay-tabs {
   bottom: -1px;
   font-size: 1.54em;
   line-height: 1.54em;
   margin: 0;
 }
+
 #overlay-tabs li {
   margin: 0 -2px;
 }
+
 .overlay ul.secondary {
   background: transparent none;
   margin: -1.4em 0 0.3em 0;
   overflow: visible;
 }
+
 .overlay #content {
   padding: 0;
 }
+
 h1#overlay-title {
   font-weight: normal;
 }
@@ -942,17 +1086,21 @@ div.add-or-remove-shortcuts {
 #dashboard .dashboard-region div.block h2 {
   background: $greyLight;
 }
+
 #dashboard div.block h2 {
   margin: 0;
   font-size: 1em;
   padding: 3px 10px;
 }
+
 #dashboard div.block div.content {
   padding: 10px 5px 5px 5px;
 }
+
 #dashboard div.block div.content ul.menu {
   margin-left: 20px;
 }
+
 #dashboard .dashboard-region .block {
   border: $greyLight 1px solid;
 }
@@ -963,18 +1111,23 @@ div.add-or-remove-shortcuts {
   margin: 0;
   padding: 1px 8px;
 }
+
 #field-display-overview tr.field-formatter-settings-changed {
   background: $tripple;
 }
+
 #field-display-overview tr.drag {
   background: $trippleDark;
 }
+
 #field-display-overview tr.field-formatter-settings-editing {
   background: $greyLight;
 }
+
 #field-display-overview .field-formatter-settings-edit-form .form-item {
   margin: 10px 0;
 }
+
 #field-display-overview .field-formatter-settings-edit-form .form-submit {
   margin-bottom: 0;
 }
@@ -983,10 +1136,12 @@ div.add-or-remove-shortcuts {
 #dashboard div#block-node-recent div.content {
   padding: 0;
 }
+
 #block-node-recent table,
 #block-node-recent tr {
   border: none;
 }
+
 #block-node-recent .more-link {
   padding: 0 5px 5px 0;
 }
@@ -995,6 +1150,7 @@ div.add-or-remove-shortcuts {
 #user-login-form .openid-links {
   margin-left: 0;
 }
+
 #user-login-form .openid-links .user-link {
   margin-left: 1.5em;
 }
@@ -1003,18 +1159,22 @@ div.add-or-remove-shortcuts {
 #overlay-disable-message {
   background-color: #addafc;
 }
+
 #overlay-disable-message a,
 #overlay-disable-message a:visited {
   color: $black;
 }
+
 #overlay-disable-message a:focus,
 #overlay-disable-message a:active {
   outline: none;
   text-decoration: underline;
 }
+
 .overlay-disable-message-focused a {
   padding: 0.4em 0.6em;
 }
+
 .overlay-disable-message-focused #overlay-dismiss-message {
   background-color: #59a0d8;
   color: $white;
@@ -1024,9 +1184,11 @@ div.add-or-remove-shortcuts {
 #edit-status .filters .form-item {
   float: left;
 }
+
 .form-managed-file .form-file, .form-managed-file .form-submit {
   margin: 0 10px 0 0;
 }
+
 input:disabled,
 textarea:disabled,
 select:disabled {
@@ -1038,4 +1200,38 @@ select:disabled {
  */
 div.messages {
   border-radius: $br-small;
+}
+
+.update .info {
+  padding-top: 0.25em;
+}
+
+.views-ui-display-tab-bucket .even {
+  background-color: $odd;
+}
+
+/**
+ * Autocomplete.
+ */
+#autocomplete {
+  ul {
+    li {
+      width: 100%;
+      display: table;
+      padding: 5px 7px;
+      img {
+        width: 24px;
+        height: 24px;
+        padding-right: 7px;
+      }
+      * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &:hover,
+      &:focus {
+        background-color: $primary;
+      }
+    }
+  }
 }
