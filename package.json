@@ -13,7 +13,7 @@
     "gulp-clean-css": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
-    "gulp-scss": "latest",
+    "gulp-cssnano": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-watch": "latest",
     "gulp-plumber": "latest"

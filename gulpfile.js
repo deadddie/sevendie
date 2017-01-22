@@ -4,6 +4,7 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   prefixer = require('gulp-autoprefixer'),
   cleancss = require('gulp-clean-css'),
+  cssnano = require('gulp-cssnano'),
   sourcemaps = require('gulp-sourcemaps'),
   rename = require('gulp-rename'),
   plumber = require('gulp-plumber'),
@@ -33,6 +34,7 @@ gulp.task('cssOwn:build', function () {
       browsers: ['last 3 version', "> 1%", "ie 8", "ie 7"]
     }))
     .pipe(cleancss({compatibility: 'ie8'}))
+    .pipe(cssnano())
     .pipe(sourcemaps.write('.'))
     //.pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(path.build.css))
