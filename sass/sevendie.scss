@@ -24,9 +24,9 @@ $odd: #eee;
 $systemFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $small: 0.923em;
 
-$br: 6px;
-$br-small: 2px;
-$br-large: 6px;
+$br: 10px;
+$br-small: 4px;
+$br-large: 16px;
 
 $ext: png; //svg
 
@@ -714,7 +714,7 @@ div.teaser-checkbox .form-item,
 }
 
 .form-item label {
-  margin: 0;
+  margin: 0 0 3px;
   padding: 0;
 }
 
@@ -1232,6 +1232,23 @@ div.messages {
       &:focus {
         background-color: $primary;
       }
+    }
+  }
+}
+
+/* Chosen */
+.chosen-container-multi .chosen-choices {
+  padding: 3px 10px;
+  border-color: $greyLight;
+  border-radius: $br-large;
+  box-shadow: none;
+}
+
+.chosen-container .chosen-results {
+  li.active-result {
+    &.highlighted {
+      background-color: $primary;
+      color: $white;
     }
   }
 }

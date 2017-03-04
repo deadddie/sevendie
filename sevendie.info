@@ -1,20 +1,10 @@
 name = Sevendie
 description = Admin theme for Drupal 7 based and improved on standard Seven theme. 
 core = 7.x
+version = 7.x-0.1
 base theme  = seven
 
-; -------
-; SCRIPTS
-; -------
 scripts[] = js/sevendie.js
-
-; ---
-; CSS 
-; ---
 stylesheets[all][] = css/sevendie.css
 
-; --------
-; SETTINGS
-; --------
-; Display the shortcut link ("+") next to an admin page title.
 settings[shortcut_module_link] = 1

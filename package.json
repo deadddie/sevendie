@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "description": "Admin theme for Drupal 7 based and improved on standard Seven theme",
   "main": "gulpfile.js",
+  "repository": "https://github.com/deadddie/sevendie",
+  "license": "GPL",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
